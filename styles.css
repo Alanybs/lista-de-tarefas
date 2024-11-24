@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.kanban-container {
+    width: 80%;
+    max-width: 1200px;
+}
+
+.kanban-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    width: 40%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: double;
+    margin: 80;
+    padding: 80;
+
+}
+
+#addTaskBtn {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addTaskBtn:hover {
+    background-color: #4cae4c;
+}
+
+.kanban-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kanban-column {
+    width: 23%;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.task-list {
+    min-height: 200px;
+    border: 2px dashed #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.task-card {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.task-card:hover {
+    background-color: #f1f1f1;
+}
+
+.task-card button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.task-card button:hover {
+    background-color: #c9302c;
+}
+
+#column-open .task-list {
+    background-color: #efff62;
+}
+
+#column-bid .task-list {
+    background-color: #e99b34;
+}
+
+#column-in-progress .task-list {
+    background-color: #5387e9;
+}
+
+#column-completed .task-list {
+    background-color: #7efa4d;
+}

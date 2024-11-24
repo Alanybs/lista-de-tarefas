@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban - Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="kanban-container">
+        <div class="kanban-header">
+            <p><h1>Kanban de Tarefas</h1>
+            <input type="text" id="taskInput" placeholder="Digite a tarefa">
+            <p><button id="addTaskBtn">Adicionar Tarefa</button></p>
+        </div>
+        <div class="kanban-columns">
+            <div class="kanban-column" id="column-open">
+                <h2>Em Aberto</h2>
+                <div class="task-list" id="tasks-open" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="kanban-column" id="column-bid">
+                <h2>Bid (Negociação)</h2>
+                <div class="task-list" id="tasks-bid" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="kanban-column" id="column-in-progress">
+                <h2>Em Andamento</h2>
+                <div class="task-list" id="tasks-in-progress" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="kanban-column" id="column-completed">
+                <h2>Entregue</h2>
+                <div class="task-list" id="tasks-completed" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
